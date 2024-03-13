@@ -1,5 +1,6 @@
-# 1. MangoDB Installation(on Ubuntu)
-I've installed MangoDB by instructions from this link: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#import-the-public-key-used-by-the-package-management-system
+# 1. MongoDB Installation (on Ubuntu)
+
+I've successfully installed MongoDB on my Ubuntu machine by following the instructions from the MongoDB documentation: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#import-the-public-key-used-by-the-package-management-system
 
 ![GitHub Image](/MongoDB/images/installation1.png)
 
@@ -12,36 +13,39 @@ I've installed MangoDB by instructions from this link: https://www.mongodb.com/d
 
 ![GitHub Image](/MongoDB/images/installation5.png)
 
-# 2. Choosing DataSet
+# 2. Choosing a dataset
 
-I've decided to choose the wine+quality datasets because I enjoy wine, and it would be interesting to work with and, at the same time, learn about the characteristics of different types of wines that I would like to taste.
+I've decided to work with the wine+quality datasets because I enjoy wine and it would be interesting to work with and learn about the characteristics of different types of wines that I would like to taste.
 
-**Dataset Link:**
+**Dataset link:**
 https://archive.ics.uci.edu/dataset/186/wine+quality
 
-### About Datasets
+### About the datasets
+
 Two datasets are included, related to red and white vinho verde wines, from the north of Portugal. The goal is to model wine quality based on physicochemical tests (see [Cortez et al. (2009)], http://www3.dsi.uminho.pt/pcortez/wine/).
 
 We have 13 variable kinds here: 11 features, 1 target variable, and 1 other variable (characteristic about wine color).
 
-# 3. Create DB & Collections
+# 3. Creating a DB and collections
 
-I've decided to name my DB wineDB.
-I want to have 3 collections: wines (includes wine_id and color), red_wines (includes IDs and characteristics for red wines), white_wines (includes IDs and characteristics for white wines)
+I've decided to name my DB `wineDB`.
+I want to have 3 collections: `wines` (includes `_id` and `color`), `red_wines` (includes `_id`, `wine_id`(id in collection `wines`) and characteristics for red wines), and `white_wines` (includes `_id`, `wine_id`(id in collection `wines`) and characteristics for white wines)
 
-### 1 Step
-I've decided to watch at first what dbs do i have
+### 1. Step
+
+First, let's check what databases we have:
 
 ![GitHub Image](/MongoDB/images/create1.png)
 
 
-### 2 Step
-I've created my DB wineDB
+### 2. Step
+I've created my DB `wineDB`
 
 ![GitHub Image](/MongoDB/images/create2.png)
 
 
 ### 3. Create collections
+
 Let's create the necessary collections now that we don't have them:
 
 ![GitHub Image](/MongoDB/images/create3.png)
@@ -50,12 +54,15 @@ Let's create the necessary collections now that we don't have them:
 
 
 # 4. Insert data
+
 ## Insert into collection "wines"
+
 To insert data into the "wines" collection, I'll use a JavaScript for loop in the mongosh console to add 6 red wines and 6 white wines.
 
 ![GitHub Image](/MongoDB/images/insert1.png)
 
 ## Insert into collection "red_wines"
+
 To insert data into the "red_wines" collection, I'll use the `insertMany()` method to add 6 red wines.
 
 
@@ -69,6 +76,7 @@ What we have in collection?
 
 
 ## Insert into collection "white_wines"
+
 To insert data into the "white_wines" collection, I'll also use the `insertMany()` method to add 6 white wines.
 
 ![GitHub Image](/MongoDB/images/insert5.png)
