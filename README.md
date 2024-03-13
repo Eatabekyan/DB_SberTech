@@ -1,2 +1,2 @@
 # DB_SberTech
-Homeworks on Databases at the SberTech BIT department 
+Databases homeworks at the SberTech BIT department
