@@ -87,3 +87,55 @@ What we have in collection?
 
 ![GitHub Image](/MongoDB/images/insert7.png)
 
+
+# 5. Update and Delete
+
+To understand if I want to try a wine, I only need a few variables, so I
+decided to delete them using updateMany().
+
+![GitHub Image](/MongoDB/images/update.png)
+
+
+So I want to delete all red wines that have a quality rating less than 5.166666
+and all white wines that have a quality rating less than 6.
+
+![GitHub Image](/MongoDB/images/delete1.png)
+
+![GitHub Image](/MongoDB/images/delete2.png)
+
+![GitHub Image](/MongoDB/images/delete4.png)
+
+![GitHub Image](/MongoDB/images/delete3.png)
+
+Since there are no white wines with a quality rating less than average, I
+decide to delete wines with a higher alcohol content.
+
+![GitHub Image](/MongoDB/images/delete5.png)
+
+I read about how to get an array of ids from a cursor here:
+https://www.mongodb.com/docs/manual/reference/method/cursor.map/
+
+![GitHub Image](/MongoDB/images/reference.png)
+
+
+![GitHub Image](/MongoDB/images/delete6.png)
+
+
+
+# 6. Indexation and performance comparison
+
+**I want to have a larger dataset for examining indexation and performance comparison, so I will completely refresh my collections by deleting everything and then filling them with data from datasets**
+
+![GitHub Image](/MongoDB/images/delete&fill1.png)
+
+![GitHub Image](/MongoDB/images/delete&fill2.png)
+
+![GitHub Image](/MongoDB/images/delete&fill3.png)
+
+![GitHub Image](/MongoDB/images/delete&fill4.png)
+
+![GitHub Image](/MongoDB/images/delete&fill5.png)
+
+![GitHub Image](/MongoDB/images/delete&fill6.png)
+
+
