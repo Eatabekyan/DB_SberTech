@@ -178,7 +178,7 @@ Also I tried to drop index and try the same
 ![GitHub Image](/MongoDB/images/index&profile8.png)
 
 
-**RESULT**: with index MongoDB examines only 569 keys and finds the result without examining documents (i.e., it finds the result very quickly), whereas without them it examines all 1599 documents and does not find anything (it takes longer to find the result), because there would not be a result by my parameters as we do not have any wine with this parameters.
+**RESULT**: with index MongoDB examines only 569 keys and finds the result without examining documents (it finds the result very quickly), whereas without them it examines all 1599 documents and does not find anything (it takes longer to find the result), because there would not be a result by my parameters as we do not have any wine with this parameters.
 
 
 
