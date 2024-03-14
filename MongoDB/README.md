@@ -141,7 +141,9 @@ https://www.mongodb.com/docs/manual/reference/method/cursor.map/
 
 For making performance comparison I create indexes for red_wines collection and try to compare speeds of query "find" with index and without it.
 
-For that I decided to use Profiler(read about it here: https://hevodata.com/learn/mongodb-profiler/) and `explain("executionStats")`
+For that I decided to use Profiler(read about it here: https://hevodata.com/learn/mongodb-profiler/) and `explain("executionStats")`(read here: https://www.mongodb.com/docs/manual/reference/method/db.collection.explain/#std-label-explain-method-executionStats)
+
+
 ## Create Indexes
 **Read here:** https://www.mongodb.com/docs/manual/reference/method/db.collection.createIndex/
 
@@ -183,6 +185,9 @@ Also I tried to drop index and try the same
 
 
 Lets do the same using `explain("executionStats")`
+
+![GitHub Image](/MongoDB/images/reference1.png)
+
 
 ### With indexes
 ![GitHub Image](/MongoDB/images/index&profile9.png)
