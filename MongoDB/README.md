@@ -122,9 +122,9 @@ https://www.mongodb.com/docs/manual/reference/method/cursor.map/
 
 
 
-# 6. Indexation and performance comparison
+# 6. Indexing and performance comparison
 
-**I want to have a larger dataset for examining indexation and performance comparison, so I will completely refresh my collections by deleting everything and then filling them with data from datasets**
+**I want to have a larger dataset for examining indexing and performance comparison, so I will completely refresh my collections by deleting everything and then filling them with data from datasets**
 
 ![GitHub Image](/MongoDB/images/delete&fill1.png)
 
@@ -139,3 +139,67 @@ https://www.mongodb.com/docs/manual/reference/method/cursor.map/
 ![GitHub Image](/MongoDB/images/delete&fill6.png)
 
 
+For making performance comparison I create indexes for red_wines collection and try to compare speeds of query "find" with index and without it.
+
+For that I decided to use Profiler(read about it here: https://hevodata.com/learn/mongodb-profiler/) and `explain("executionStats")`
+## Create Indexes
+**Read here:** https://www.mongodb.com/docs/manual/reference/method/db.collection.createIndex/
+
+I decided to create index for red wines.
+
+![GitHub Image](/MongoDB/images/index&profile1.png)
+
+## Start Profiling
+
+I dropped the old system.profile collection as it was filled with rubbish in my DB, because I decided to play with it to understand how it works =).
+
+I've created a new system.profile collection sized at 5 MB (5000000 bytes), execute the following sequence of commands in mongosh:
+
+![GitHub Image](/MongoDB/images/index&profile2.png)
+
+Level 2 for the profiler collects profiling data for all the database operations.
+
+![GitHub Image](/MongoDB/images/index&profile3.png)
+
+
+Than I tried to find some kind of wines in my collection "red_wine"
+and see stats in collection `system.profile`
+
+![GitHub Image](/MongoDB/images/index&profile4.png)
+
+![GitHub Image](/MongoDB/images/index&profile5.png)
+
+Also I tried to drop index and try the same
+
+![GitHub Image](/MongoDB/images/index&profile6.png)
+
+![GitHub Image](/MongoDB/images/index&profile7.png)
+
+![GitHub Image](/MongoDB/images/index&profile8.png)
+
+
+**RESULT**: with index MongoDB examines only 569 keys and finds the result without examining documents (i.e., it finds the result very quickly), whereas without them it examines all 1599 documents and does not find anything (it takes longer to find the result), because there would not be a result by my parameters as we do not have any wine with this parameters.
+
+
+
+Lets do the same using `explain("executionStats")`
+
+### With indexes
+![GitHub Image](/MongoDB/images/index&profile9.png)
+
+![GitHub Image](/MongoDB/images/index&profile10.png)
+
+![GitHub Image](/MongoDB/images/index&profile11.png)
+
+### Drop indexes
+
+![GitHub Image](/MongoDB/images/index&profile12.png)
+
+![GitHub Image](/MongoDB/images/index&profile13.png)
+
+![GitHub Image](/MongoDB/images/index&profile14.png)
+
+
+**RESULT**: same as profiler result 
+
+# END OF MY EXPERIMENT WITH MONGO***DB***
