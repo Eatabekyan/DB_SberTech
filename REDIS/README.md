@@ -40,7 +40,7 @@ Directories: [8401](/REDIS/8401), [8402](/REDIS/8402),[8403](/REDIS/8403)
 
 Added config files(redis.conf) in each of them for each node 
 
-## STEP 5
+## STEP 6
 ### RUN CLUSTER
 
 ![GitHub Image](/REDIS/images/7.png)
@@ -53,7 +53,7 @@ Added config files(redis.conf) in each of them for each node
 
 ![GitHub Image](/REDIS/images/11.png)
 
-## STEP 6
+## STEP 7
 ### ADD DATA IN CLUSTER
 
 [Python Script](/REDIS/main_cluster.py)
