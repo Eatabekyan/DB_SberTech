@@ -47,7 +47,7 @@ Added config files (redis.conf) in each of them for each node.
 
 ![GitHub Image](/REDIS/images/8.png)
 
-![GitHub Image](/REDIS/images/10.png)
+![GitHub Image](/REDIS/images/10.png) 
 
 ![GitHub Image](/REDIS/images/9.png)
 
