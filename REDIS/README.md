@@ -1,25 +1,26 @@
 # REDIS
 
-## STEP1
-### RUN DOCKER CONTAINER WITH REDIT
+## STEP 1
+### RUN DOCKER CONTAINER WITH REDIS
 
 ![GitHub Image](/REDIS/images/1.png)
-## STEP2
+
+## STEP 2
 ### CHECK REDIS-INSIGHT
 
-DB is empty yet!
+DB is empty.
 ![GitHub Image](/REDIS/images/2.png)
 
-## STEP3
-### FIND & DOWNLOAD JSON FILE (>20Mb)
-**From here:** https://examplefile.com/code/json/20-mb-json
+## STEP 3
+### FIND & DOWNLOAD JSON FILE (>20MB)
+**From here:** [Download JSON File](https://examplefile.com/code/json/20-mb-json)
 
 ![GitHub Image](/REDIS/images/3.png)
 
-## STEP4
-### SAVE LARGE JSON (~20MB) IN THE FORM OF DIFFERENT STRUCTURES - STRING, SET, SET, LIST & TEST SPEED FOR ADDING AND READING
+## STEP 4
+### SAVE LARGE JSON (~20MB) IN THE FORM OF DIFFERENT STRUCTURES - STRING, HSET, ZSET, LIST & TEST SPEED FOR ADDING AND READING
 
-I decided to use Python for that.
+I decided to use Python for this.
 
 [Python Script](/REDIS/main.py)
 
@@ -31,14 +32,13 @@ I decided to use Python for that.
 
 
 ## STEP 5
-
 ### CREATE CLUSTER
 
-I've created directories for each port I want to use for my cluster
+I've created directories for each port I want to use for my cluster.
 
-Directories: [8401](/REDIS/8401), [8402](/REDIS/8402),[8403](/REDIS/8403)
+Directories: [8401](/REDIS/8401), [8402](/REDIS/8402), [8403](/REDIS/8403)
 
-Added config files(redis.conf) in each of them for each node 
+Added config files (redis.conf) in each of them for each node. 
 
 ## STEP 6
 ### RUN CLUSTER
